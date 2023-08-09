@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <title>Бібліотеки фахових коледжів Одеського національного технічного університету</title>
+</head>
+<body>
+<div class="wrapper">
+        <main>
+            <div class=" main">
+                <h1 class="title">Бібліотеки фахових коледжів 
+                    <p>Одеського національного технічного університету</p></h1>
+                 <div class=" college1"> 
+                    <div class=" college">
+                        <a class="college" href="{% url 'tfk' %}">
+                            <img class="img" src="{% static 'img/tfk_start.svg' %}" alt="">
+                            <p class="title-text">Одеський технічний фаховий коледж</p>
+                        </a>
+                        
+                    </div>
+                    <div class="college">
+                        <a href="{% url 'mt' %}">
+                            <img class=" img img_mt" src="{% static 'img/mt 2.png' %}" alt="">
+                            <p class="title-text">Механіко-технологічний фаховий коледж</p>
+                        </a>
+                    </div>
+                    <div class=" college">
+                        <a class="college" href="{% url 'nti' %}">
+                            <img class="img" src="{% static 'img/nti_start.svg' %}" alt="">
+                            <p class="title-text">Фаховий коледж нафтогазових
+                                технологій,<br/> інженерії та
+                                інфраструктури сервісу
+                            </p>
+                        </a>
+                    </div>
+                    <div class=" college">
+                        <a href="{% url 'kpa' %}">
+                            <img class="img" src="{% static 'img/kpa_start.svg' %}" alt="">
+                            <p class="title-text">Коледж промислової автоматики та <br />
+                                інформаційних технологій
+                            </p>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+                <!-- <h2 class="title">Науково-технічна бібліотека Одеського національного технологічного університету</h2> -->
+            
+        </main>
+
+        
+    
+        <footer class="footer">
+            <div class="footer_content">
+            <div class="contact-information">
+                <p class="footer-title-text">Контактна інформація</p> 
+                <div class="footer_text">
+                    <p class="contact-info-item">Україна, 65039,</p>
+                    <p class="contact-info-item">м. Одеса, вул. Канатна, 112</p>
+                    <p class="contact-info-item"><a href="tel:+38(048)712‐42‐52">+38(048)712‐42‐52</a></p>
+                    <p class="contact-info-item"><a href="mailto:ibrary@ontu.edu.ua">library@ontu.edu.ua</a></p>
+                </div>
+            </div>
+           <div class="social-media">
+           <p class="footer-title-text">Соціальні мережі</p> 
+           <div class="social-icons">
+            <a href="https://t.me/LibraryONTU" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4n9Z-5en90CRlSmgmgSmbQ" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <!-- <a href="https://instagram.com/freecodecamp">
+                <i class="fab fa-instagram"></i>
+              </a> -->
+              <a href="https://www.facebook.com/LibraryONTU/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              </div>
+        </div>
+        <div class="links">
+           <p class="footer-title-text">Корисні посилання</p> 
+           <div class="footer_text">
+           <p><a href="https://library.ontu.edu.ua/" target=”_blank”>НТБ ОНТУ</a></p>
+           <p><a href="https://kci.ontu.edu.ua/uk/pages/indexing" target=”_blank”>Наукові бази</a></p>
+           <p><a href="https://4ref.ontu.edu.ua/" target=”_blank”>ONTU4ref</a></l</p>
+           <p><a href="https://need2know.ontu.edu.ua/" target=”_blank”>Need2Know</a></p>
+        </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> created by Korolevich Yelyzaveta © ONTULibrary, <span id='current-year'></span>. All rights reserved</p>
+    </div>
+        </footer>
+    </div >
+    <script src="{% static 'js/index.js' %}">
+    </script>
+</body>
+</html>
