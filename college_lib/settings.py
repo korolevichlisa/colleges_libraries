@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v@0!bm1!iclytnj%d@zdwzh-hcl@8917_g8n@%vhxdpky3n-v8'
-
+#SECRET_KEY = 'django-insecure-v@0!bm1!iclytnj%d@zdwzh-hcl@8917_g8n@%vhxdpky3n-v8'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.171', '195.138.86.105', 'lib-hub.ontu.edu.ua']
 
 
 # Application definition
@@ -81,11 +80,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db1', 
-        'USER': 'postgres', 
-        'PASSWORD': '12345678',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': '5432'
     }
 }
 
@@ -118,8 +117,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-ALLOWED_HOSTS = ['0.0.0.0', 'tiny-pillows-hear.loca.lt', '127.0.0.1', 'localhost']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
