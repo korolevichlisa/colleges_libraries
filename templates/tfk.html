@@ -33,7 +33,7 @@
           Одеського  технічного фахового коледжу</p></h1>
         <div class="main_nav1">
             <div class="item_li"><a href="#news">Новини</a></div> 
-            <div class="item_li"><a href="#co-worker">Працівники (фото  та коротка інформація про них)</a></div>
+            <div class="item_li"><a href="#co-worker">Працівники</a></div>
             <div class="item_li"><a href="#Library_funds">Фонд бібліотеки</a></div>
             <div class="item_li"><a href="#Room">Приміщення бібліотеки</a></div>
             <div class="item_li"><a href="#Library_servic">Послуги бібліотеки</a></div>
@@ -46,22 +46,20 @@
        
     <section class="section_news"  id="news">
       <div class="conteiner_news">
-        <h1 class="title"><span class="title_main">Бібліотека</span> <p>
-          Одеського  технічного фахового коледжу</p></h1>
         <h1 class="new_title">Новини</h1>
         <div class="scroll_news">
           {% for post in news %}
           <div>
             <!-- <p>published: {{ post.published_date }}</p> -->
             <h1 class="news_title">{{ post.title }}</a></h1>
-            <p class="news_text">{{ post.text|linebreaksbr }}</p> 
+            <p class="news_text">{{ post.text|linenumbers|linebreaksbr }}</p> 
         </div>
           {% endfor %}
         </div></div>
     </section>
     <section class="section_worker"  id="co-worker">
       <div class="conteiner_worker">
-        <div class="title_box"><h1 class="worker_title">Працівники (фото  та коротка інформація про них)</h1></div>
+        <div class="title_box"><h1 class="worker_title">Працівники</h1></div>
         <div class="scroll_worker ">
           {% for post in coworker %}
           <div class=" grid_worker">
@@ -80,10 +78,8 @@
     <section class="section_funds"  id="Library_funds">
       <div class="conteiner_funds">
       <div class="title_box"><h1 class="worker_title">Фонд бібліотеки</h1></div>
-      <div class="scroll_worker">
+      <div class="scroll_item">
         {% for post in fund %}
-        <!-- <div class="clearfix"> -->
-          <!-- <img class="img_coworker" src="{{post.photo.url}}" alt="{{ post.full_name }}" > -->
           <h1 class="funds_title">{{ post.full_name }}</a></h1>
           <p class="funds_text">{{ post.text }}</p>
       <!-- </div> -->
@@ -94,7 +90,7 @@
     <section class="section_room" id="Room">
       <div class="conteiner_room">
       <div class="title_box"><h1 class="worker_title">Приміщення бібліотеки</h1></div>
-      <div class="scroll_worker">
+      <div class="scroll_item">
         {% for post in room %}
         <div class=" grid_worker">
           
@@ -140,7 +136,7 @@
     <section class="section_servic" id="Library_servic">
       <div class="conteiner_servic">
       <div class="title_box"><h1 class="worker_title">Послуги бібліотеки</h1></div>
-      <div class="scroll_worker">
+      <div class="scroll_item">
         {% for post in servic %}
         <div class="servic">
           <h1 class="servic_title">{{ post.name_services }}</a></h1>
@@ -152,7 +148,7 @@
     <section class="section_exhibition" id="Exhibition">
       <div class="conteiner_exhibition">
       <div class="title_box"><h1 class="worker_title">Виставки</h1></div>
-      <div class="scroll_worker">
+      <div class="scroll_item">
         {% for post in exhibition %}
         <div class=" exhibition">
           <div class="grid_exhibition_item1">
@@ -175,12 +171,10 @@
       <div class="conteiner_info">
       <div class="title_box"><h1 class="worker_title">Контактна інформація бібіліотеки</h1></div>
       <div class="contact_info">
-        <p class="contact-info-item">Україна, 65006,</p>
-        <p class="contact-info-item">м. Одеса, вул. Балківська, 54</p>
-        <p class="contact-info-item">Бібліотека працює з 9.00 до 16.00 кожен день,<br> окрім суботи і неділі</p>
+        <p class="contact-info-item">Україна, 65006,<br/>м. Одеса, вул. Балківська, 54</p>
+        <p class="contact-info-item">Бібліотека працює з 9.00 до 16.00<br> понеділок - п'ятниця</p>
         <p class="contact-info-item"><a href="tel:7531679"><i class="fas fa-phone"></i> 753-16-79</a></p>
-        <p class="contact-info-item"><a href="mailto:bibliotekaotk@gmail.com"><i class="fas fa-at" style="font-size: 24px;"></i> bibliotekaotk@gmail.com</a></p>
-      </div>
+        <p class="contact-info-item"><a href="mailto:bibliotekaotk@gmail.com"><i class="fas fa-at" style="font-size: 24px;"></i> bibliotekaotk@gmail.com</a></p>      </div>
       <div></div>
     </div>
     </section>

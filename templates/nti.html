@@ -24,7 +24,7 @@
         інфраструктури сервісу</p></h1>
       <div class="main_nav1">
           <div class="item_li"><a href="#news">Новини</a></div> 
-          <div class="item_li"><a href="#co-worker">Працівники (фото  та коротка інформація про них)</a></div>
+          <div class="item_li"><a href="#co-worker">Працівники</a></div>
           <div class="item_li"><a href="#Library_funds">Фонд бібліотеки</a></div>
           <div class="item_li"><a href="#Room">Приміщення бібліотеки</a></div>
           <div class="item_li"><a href="#Library_servic">Послуги бібліотеки</a></div>
@@ -43,7 +43,8 @@
         {% for post in news %}
         <div>
           <h1 class="news_title">{{ post.title }}</a></h1>
-          <p class="news_text">{{ post.text|linebreaksbr }}</p> 
+         
+          <p class="news_text">{{ post.text|linenumbers|linebreaksbr }}</p> 
       </div>
         {% endfor %}
       </div></div>
@@ -160,10 +161,9 @@
     <div class="conteiner_info">
     <div class="title_box"><h1 class="worker_title">Контакти бібіліотеки</h1></div>
     <div class="contact_info">
-      <p class="contact-info-item">Україна, 65000,</p>
-      <p class="contact-info-item">м. Одеса, вулиця Левітана, 46а</p>
-      <p class="contact-info-item">Бібліотека працює з 8.30 до 16.30. <br>Вихідний субота, неділя, перерва з 12.30 до 13.00</p>
-      <p class="contact-info-item"><a href="tel:0678542497"><i class="fas fa-phone"></i> 067-854-24-97</a></p>
+      <p class="contact-info-item">Україна, 65000,<br/>м. Одеса, вулиця Левітана, 46а
+        <br/><a href="tel:0678542497"><i class="fas fa-phone"></i> 067-854-24-97</a></p>
+      <p class="contact-info-item">Бібліотека працює з 8.30 до 16.30. <br>понеділок - п'ятниця, <br/>перерва з 12.30 до 13.00</p>
     </div>
     <div></div>
   </div>

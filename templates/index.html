@@ -6,35 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" type="text/css"  href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
     <title>Бібліотеки фахових коледжів Одеського національного технічного університету</title>
 </head>
 <body>
+
 <div class="wrapper">
         <main>
             <div class=" main">
                 <h1 class="title">Бібліотеки фахових коледжів 
                     <p>Одеського національного технічного університету</p></h1>
                  <div class=" college1"> 
-                    <div class=" college">
-                        <a class="college" href="{% url 'tfk' %}">
+                    <div class=" college ">
+                        <a  href="{% url 'tfk' %}">
                             <img class="img" src="{% static 'img/tfk_start.svg' %}" alt="">
-                            <p class="title-text">Одеський технічний фаховий коледж</p>
+                            <p class="title-text">Одеський технічний <br> фаховий коледж</p>
                         </a>
                         
                     </div>
-                    <div class="college">
+                    <div class="college ">
                         <a href="{% url 'mt' %}">
-                            <img class=" img img_mt" src="{% static 'img/mt 2.png' %}" alt="">
-                            <p class="title-text">Механіко-технологічний фаховий коледж</p>
+                            <img class=" img img_mt " src="{% static 'img/mt 2.png' %}" alt="">
+                            <p class="title-text">Механіко-технологічний<br> фаховий коледж</p>
                         </a>
                     </div>
-                    <div class=" college">
-                        <a class="college" href="{% url 'nti' %}">
+                    <div class=" college ">
+                        <a  href="{% url 'nti' %}">
                             <img class="img" src="{% static 'img/nti_start.svg' %}" alt="">
                             <p class="title-text">Фаховий коледж нафтогазових
                                 технологій,<br/> інженерії та
@@ -42,7 +46,7 @@
                             </p>
                         </a>
                     </div>
-                    <div class=" college">
+                    <div class=" college ">
                         <a href="{% url 'kpa' %}">
                             <img class="img" src="{% static 'img/kpa_start.svg' %}" alt="">
                             <p class="title-text">Коледж промислової автоматики та <br />
@@ -74,16 +78,16 @@
            <div class="social-media">
            <p class="footer-title-text">Соціальні мережі</p> 
            <div class="social-icons">
-            <a href="https://t.me/LibraryONTU" target="_blank">
+            <a  href="https://t.me/LibraryONTU" target="_blank">
                 <i class="fab fa-telegram"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UC4n9Z-5en90CRlSmgmgSmbQ" target="_blank">
+            <a class="item_icon" href="https://www.youtube.com/channel/UC4n9Z-5en90CRlSmgmgSmbQ" target="_blank">
               <i class="fab fa-youtube"></i>
             </a>
             <!-- <a href="https://instagram.com/freecodecamp">
                 <i class="fab fa-instagram"></i>
               </a> -->
-              <a href="https://www.facebook.com/LibraryONTU/" target="_blank">
+              <a  href="https://www.facebook.com/LibraryONTU/" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
               </div>
