@@ -14,9 +14,8 @@
     <title>Фаховий коледж нафтогазових технологій, інженерії та інфраструктури сервісу</title>
 </head>
 <body>
-  <div class="loader_bg">
-    <div class="loader"></div>
- </div>
+ <div class="lds-facebook"><div></div><div></div><div></div></div>
+
   <main  class="main">
   <section class="main_nav ">
       <h1 class="title"><span class="title_main">Бібліотека</span> <p>Фахового коледжу нафтогазових
@@ -42,16 +41,16 @@
       <div class="scroll_news">
         {% for post in news %}
         <div>
-          <h1 class="news_title">{{ post.title }}</a></h1>
+          <h1 class="news_title">{{ post.title }}</h1>
          
-          <p class="news_text">{{ post.text|linenumbers|linebreaksbr }}</p> 
+          <p class="news_text">{{ post.text|linebreaksbr }}</p> 
       </div>
         {% endfor %}
       </div></div>
   </section>
   <section class="section_worker"  id="co-worker">
     <div class="conteiner_worker">
-      <div class="title_box"><h1 class="worker_title">Працівники (фото  та коротка інформація про них)</h1></div>
+      <div class="title_box"><h1 class="worker_title">Працівники</h1></div>
       <div class="scroll_worker ">
         {% for post in coworker %}
         <div class=" grid_worker">
@@ -70,7 +69,7 @@
   <section class="section_funds"  id="Library_funds">
     <div class="conteiner_funds">
     <div class="title_box"><h1 class="worker_title">Фонд бібліотеки</h1></div>
-    <div class="scroll_worker">
+    <div class="scroll_item">
       {% for post in fund %}
         <h1 class="funds_title">{{ post.full_name }}</a></h1>
         <p class="funds_text">{{ post.text }}</p>
@@ -81,7 +80,7 @@
     <section class="section_room" id="Room">
       <div class="conteiner_room">
       <div class="title_box"><h1 class="worker_title">Приміщення бібліотеки</h1></div>
-      <div class="scroll_worker">
+      <div class="scroll_item">
         {% for post in room %}
         <div class=" grid_worker">
           
@@ -123,11 +122,12 @@
       </div>
       {% endfor %}
       </div>
+      </div>
     </section>
   <section class="section_servic" id="Library_servic">
     <div class="conteiner_servic">
     <div class="title_box"><h1 class="worker_title">Послуги бібліотеки</h1></div>
-    <div class="scroll_worker">
+    <div class="scroll_item">
       {% for post in servic %}
       <div class="servic">
         <h1 class="servic_title">{{ post.name_services }}</a></h1>
@@ -138,19 +138,19 @@
   <section class="section_exhibition" id="Exhibition">
     <div class="conteiner_exhibition">
     <div class="title_box"><h1 class="worker_title">Виставки</h1></div>
-    <div class="scroll_worker">
+    <div class="scroll_item">
       {% for post in exhibition %}
       <div class=" exhibition">
         <div class="grid_exhibition_item1">
-        <img class="img_exhibition" src="{{post.photo.url}}" alt="{{ post.title }}" >
+        <img class=" img_exhibition" src="{{post.photo.url}}" alt="{{ post.title }}" >
       </div>
       <div class="grid_exhibition_item2">
-        <div class="exhibition_title">{{post.title}}</div>
+        <div class="exhibition_title">{{post.title|linebreaksbr}}</div>
         <div class="exhibition_description">
             <p>{{post.text}}</p>
         </div>
         <div class="exhibition_btn">
-          <a class="exhibition_link" href="{{post.doc.url}}" target="_blank" download>ДИВИТИСЯ</a>
+          <a class="exhibition_link" href="{{post.doc.url}}" target="_blank" >ДИВИТИСЯ</a>
         </div>
       </div>
     </div>

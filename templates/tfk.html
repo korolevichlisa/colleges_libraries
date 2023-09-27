@@ -1,36 +1,25 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
+
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="{% static 'css/styless2.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="{% static 'css/styless2.css' %}">
 
      <title>Одеський технічний фаховий коледж</title>
 </head>
 <body >
-   <div class="loader_bg">
-      <div class="loader"></div>
-      <!-- <div id="loading-text">loading</div> -->
-  
-   </div>
+ <div class="lds-facebook"><div></div><div></div><div></div></div>
     <main  class="main">
-        
-    <section class="main_nav ">
-        
-        <h1 class="title"><span class="title_main">Бібліотека</span> <p>
-          Одеського  технічного фахового коледжу</p></h1>
+    <section class="main_nav ">    
+        <h1 class="title"><span class="title_main">Бібліотека</span> <p>Одеського  технічного фахового коледжу</p></h1>
         <div class="main_nav1">
             <div class="item_li"><a href="#news">Новини</a></div> 
             <div class="item_li"><a href="#co-worker">Працівники</a></div>
@@ -41,21 +30,19 @@
             <div class="item_li"><a href="#contact_info">Контакти бібліотеки</a></div>
             <div  class="main_img"><img src="../static/img/tfk2.svg" alt="" class="img_tfk"></div>
         </div>
-        
     </section>
-       
     <section class="section_news"  id="news">
       <div class="conteiner_news">
         <h1 class="new_title">Новини</h1>
         <div class="scroll_news">
           {% for post in news %}
-          <div>
-            <!-- <p>published: {{ post.published_date }}</p> -->
+          <div class="new_item">
             <h1 class="news_title">{{ post.title }}</a></h1>
-            <p class="news_text">{{ post.text|linenumbers|linebreaksbr }}</p> 
+            <p class="news_text">{{ post.text|linebreaksbr }}</p> 
         </div>
           {% endfor %}
-        </div></div>
+        </div>
+      </div>
     </section>
     <section class="section_worker"  id="co-worker">
       <div class="conteiner_worker">
@@ -63,8 +50,7 @@
         <div class="scroll_worker ">
           {% for post in coworker %}
           <div class=" grid_worker">
-          
-            <div class="grid_worker_item1"><h1 class="coworker_title ">{{ post.full_name }}</a></h1>
+            <div class="grid_worker_item1"><h1 class="coworker_title ">{{ post.full_name }}</h1>
             <p class="coworker_text">{{ post.text }}</p>
           </div>
             <div class="grid_worker_item2">
@@ -80,9 +66,8 @@
       <div class="title_box"><h1 class="worker_title">Фонд бібліотеки</h1></div>
       <div class="scroll_item">
         {% for post in fund %}
-          <h1 class="funds_title">{{ post.full_name }}</a></h1>
+          <h1 class="funds_title">{{ post.full_name }}</h1>
           <p class="funds_text">{{ post.text }}</p>
-      <!-- </div> -->
         {% endfor %}
       </div>
     </div>
@@ -93,12 +78,10 @@
       <div class="scroll_item">
         {% for post in room %}
         <div class=" grid_worker">
-          
-          <div class="grid_worker_item1"><h1 class="coworker_title ">{{ post.title }}</a></h1>
+          <div class="grid_worker_item1"><h1 class="coworker_title ">{{ post.title }}</h1>
           <p class="coworker_text">{{ post.text }}</p>
           </div>
           <div class="grid_worker_item2">
-            
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
           <!--Indicators-->
           <ol class="carousel-indicators">
@@ -132,6 +115,7 @@
       </div>
       {% endfor %}
       </div>
+      </div>
     </section>
     <section class="section_servic" id="Library_servic">
       <div class="conteiner_servic">
@@ -139,8 +123,7 @@
       <div class="scroll_item">
         {% for post in servic %}
         <div class="servic">
-          <h1 class="servic_title">{{ post.name_services }}</a></h1>
-          <!-- <p class="coworker_text">{{ post.text }}</p> -->
+          <h1 class="servic_title">{{ post.name_services }}</h1>
         </div>
         {% endfor %}
       </div></div>
@@ -169,13 +152,14 @@
     </section>
     <section class="section_info" id="contact_info">
       <div class="conteiner_info">
-      <div class="title_box"><h1 class="worker_title">Контактна інформація бібіліотеки</h1></div>
+      <div class="title_box"><h1 class="worker_title">Контакти бібіліотеки</h1></div>
       <div class="contact_info">
         <p class="contact-info-item">Україна, 65006,<br/>м. Одеса, вул. Балківська, 54</p>
         <p class="contact-info-item">Бібліотека працює з 9.00 до 16.00<br> понеділок - п'ятниця</p>
         <p class="contact-info-item"><a href="tel:7531679"><i class="fas fa-phone"></i> 753-16-79</a></p>
-        <p class="contact-info-item"><a href="mailto:bibliotekaotk@gmail.com"><i class="fas fa-at" style="font-size: 24px;"></i> bibliotekaotk@gmail.com</a></p>      </div>
-      <div></div>
+        <p class="contact-info-item"><a href="mailto:bibliotekaotk@gmail.com"><i class="fas fa-at" ></i> bibliotekaotk@gmail.com</a></p> 
+      </div>
+      <!-- <div></div> -->
     </div>
     </section>
 </main>
@@ -183,7 +167,5 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>        
 <script src="{% static 'js/index.js' %}" charset="UTF-8"></script>
-
-
 </body>
 </html>
