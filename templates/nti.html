@@ -138,16 +138,16 @@
   <section class="section_exhibition" id="Exhibition">
     <div class="conteiner_exhibition">
     <div class="title_box"><h1 class="worker_title">Виставки</h1></div>
-    <div class="scroll_item">
+    <div class="scroll_work">
       {% for post in exhibition %}
       <div class=" exhibition">
         <div class="grid_exhibition_item1">
         <img class=" img_exhibition" src="{{post.photo.url}}" alt="{{ post.title }}" >
       </div>
       <div class="grid_exhibition_item2">
-        <div class="exhibition_title">{{post.title|linebreaksbr}}</div>
+        <div class="exhibition_title">{{post.title}}</div>
         <div class="exhibition_description">
-            <p>{{post.text}}</p>
+            <p>{{post.text|linebreaksbr}}</p>
         </div>
         <div class="exhibition_btn">
           <a class="exhibition_link" href="{{post.doc.url}}" target="_blank" >ДИВИТИСЯ</a>
